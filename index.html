@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <style>
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <pre class="mermaid">
+        graph TB
+            M[Mastery Level<br>Creating & Innovating]
+            A[Advanced Level<br>Complex Problem Solving]
+            I[Intermediate Level<br>Practical Application]
+            F[Foundation Level<br>Core Concepts]
+            B[Beginner Level<br>Basic Understanding]
+
+            B --> |Building Knowledge Base| F
+            F --> |Developing Skills| I
+            I --> |Deepening Expertise| A
+            A --> |Achieving Excellence| M
+
+            B1[Self-Assessment<br>Learning Style Discovery] --> B
+            B2[Basic Terminology<br>Fundamental Principles] --> B
+            B3[Resource Gathering<br>Study Planning] --> B
+
+            F1[Structured Practice<br>Regular Exercises] --> F
+            F2[Concept Connections<br>Pattern Recognition] --> F
+            F3[Feedback Integration<br>Progress Tracking] --> F
+
+            I1[Real-world Projects<br>Practical Challenges] --> I
+            I2[Peer Collaboration<br>Knowledge Sharing] --> I
+            I3[Skill Refinement<br>Error Analysis] --> I
+
+            A1[Advanced Techniques<br>Complex Scenarios] --> A
+            A2[Teaching Others<br>Knowledge Transfer] --> A
+            A3[Creative Solutions<br>Problem Crafting] --> A
+
+            M1[Innovation Creation<br>New Approaches] --> M
+            M2[Field Contribution<br>Knowledge Building] --> M
+            M3[Mastery Sharing<br>Community Leading] --> M
+
+            classDef beginner fill:#90EE90,stroke:#006400,color:black
+            classDef foundation fill:#87CEEB,stroke:#0000CD,color:black
+            classDef intermediate fill:#DDA0DD,stroke:#8B008B,color:black
+            classDef advanced fill:#FFB6C1,stroke:#FF1493,color:black
+            classDef master fill:#FFD700,stroke:#DAA520,color:black
+            
+            class B,B1,B2,B3 beginner
+            class F,F1,F2,F3 foundation
+            class I,I1,I2,I3 intermediate
+            class A,A1,A2,A3 advanced
+            class M,M1,M2,M3 master
+        </pre>
+    </div>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'base'
+        });
+    </script>
+</body>
+</html>
